@@ -24,7 +24,7 @@ module RepositoryChallenge
   # RepositoryChallenge.collection_aggregate({"$count": 'challenge_count'}).to_a
   # => [{"challenge_count"=>102}]
   def self.collection_aggregate(*args)
-    Challenge.collection.aggregate(args.flatten).allow_disk_use(true)
+    Challenge.collection.aggregate(args.flatten)
   end
 
   # Sum every entries of every Challenge
